@@ -1,0 +1,34 @@
+'''
+Problema: beecrowd | 1037
+Data: 2026.04.20
+Estudante: Guilherme Antunes de Camargo
+'''
+# Objetivo: Ler um valor float e indicar em qualquer intervalo ele se encontra.
+
+# --- ANÁLISE (LIAC) ---
+# Entrada: Um número de ponto flutuante qualquer.
+# Processamento: Verificar em qual dos intervalos o valor se enquadra.
+# (0,25) - <= valor <= 25;
+# (25,50) - 25 < valor <= 50;
+# (50,75) - 50 < valor <= 75;
+# (75,100) - 75 < valor <= 100;
+# Fora - qualquer outro valor.
+# Saída: Mensagem com o iervalo correspondente, ou "Fora de Intervalo".
+
+valor = float(input())
+
+# Cada elif só é testado se todas as condições anteriores forem falsas.
+# Isso eliminaa necessidade de ifs aninhados - código mais limpo e legível.
+if 0 <= valor <= 25:
+    # Colchetes indicam que o extremo estrá incluído no intervalo.
+    print("Intervalo [0,25]")
+elif 25 < valor <= 50:
+    # O parênteses indica que o extremo está incluído no intervalo.
+    print("Intervalo (25,50]")
+elif 50 < valor <= 75:
+    print(" Intervalo (50,75]")
+elif 75 < valor <= 100:
+    print("Intervalo (75,100]")
+else:
+    # Nenhum intevralo correspondente; valor nagtivo ou acima de 100.
+    print("Fora de intervalo")
