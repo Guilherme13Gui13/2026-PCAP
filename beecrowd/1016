@@ -1,0 +1,16 @@
+'''
+Problema: beecrowd | 1016
+Data: 2026.04.23
+Estudante: Guilherme Antunes de Camargo
+'''
+# Objetivo: Ler um valor inteiro, uma distância em km, e exibir quantos minutos leva para o carro Y ficar essa distâcia do carro X.
+# --- ANÁLISE (LIAC) ---
+# Entrada: Um valor inteiro.
+# Processamento: Calcular o dobro da distância recebida.
+# Saída: " valor minutos".
+
+X = 60
+Y = 90
+A = int(input())
+B = A * 2 
+print(f"{B} minutos")
