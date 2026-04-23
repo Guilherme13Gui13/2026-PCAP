@@ -1,0 +1,17 @@
+'''
+Problema: beecrowd | 1017
+Data: 2026.04.23
+Estudante: Guilherme Antunes de Camargo
+'''
+# Objetivo: Ler dois valores, quantidade de horas e velocidade média, em seguida calcular quantos litros serão necessários.
+
+# --- ANÁLISE (LIAC) ---
+# Entrada: Dois valores inteiros
+# Processamento: Multiplicar a velocidade pelo tempo, e dividir o resultado por 12.
+# Saída: Quantidade de litros que serão gastos com 3 casas após a vígula.
+
+A = int(input())
+B = int(input())
+C = A * B
+D = C / 12
+print(f"{D:.3f}")

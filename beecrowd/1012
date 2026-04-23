@@ -1,0 +1,27 @@
+'''
+Problema: beecrowd | 1012
+Data: 2026.04.23
+Estudante: Guilherme Antunes de Camargo
+'''
+# Objetivo: Ler três valores com ponto flutuante, e calcular e exibir a área do triângulo, círculo, trapézio, quadrado e retângulo. 
+
+# --- ANÁLISE (LIAC) ---
+# Entrada: Três valores com ponto flutuante, A, B e C.
+# Processamento: Calcular cada figura a partir de A, B e C.
+# Saída: "TRAINGULO:" "CIRCULO:" "TRAPEZIO" "QUADRADO" "RETANGULO", E COM 3 CASAS DECIMAIS.
+
+A, B, C = input().split()
+A = float(A)
+B = float(B)
+C = float(C)
+pi = 3.14159
+area1 = A * C / 2
+area2 = C ** 2 * pi
+area3 = (A + B) * C / 2
+area4 = B ** 2
+area5 = A * B
+print(f"TRIANGULO: {area1:.3f}")
+print(f"CIRCULO: {area2:.3f}")
+print(f"TRAPEZIO: {area3:.3f}")
+print(f"QUADRADO: {area4:.3f}")
+print(f"RETANGULO: {area5:.3f}")
