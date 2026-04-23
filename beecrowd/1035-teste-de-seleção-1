@@ -1,0 +1,21 @@
+'''
+Problema: beecrowd | 1035
+Data: 2026.04.23
+Estudante: Guilherme Antunes de Camargo
+'''
+# Objetivo: Ler 4 valores inteiros, e mostrar na tela "Valores aceitos" ou "Valores nao aceitos".
+
+# --- ANÁLISE (LIAC) ---
+# Entrada: Quatro valore interios.
+# Processamento: Verificar se B é maior que C, D maior do que A, se C+D>A+B, se C e D são positivos e se A é par.
+# Saída: Se tudo for comprovado, exibir "Valores aceitos", senão "Valores nao aceitos".
+
+A, B, C, D = input().split()
+A = int(A)
+B = int(B)
+C = int(C)
+D = int(D)
+if B > C and D > A and C + D > A + B and C > 0 and D > 0 and A % 2 == 0:
+    print("Valores aceitos")
+else:
+    print("Valores nao aceitos")
