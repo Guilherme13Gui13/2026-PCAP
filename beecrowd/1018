@@ -1,0 +1,28 @@
+'''
+Problema: beecrowd | 1018
+Data: 2026.04.30
+Estudante: Guilherme Antunes de Camargo
+'''
+# Objetivo: Ler um valor inteiro A, calcular o menor número de notas possíveis.
+# --- ANÁLISE (LIAC) ---
+# Entrada: Ler um número inteiro A
+# Processamento: Calcular a menor quantidade de notas possíveis.
+# Saída: Exibir a quantidade e notas em seguida de qual nota que é.
+
+A = int(input())
+print(f'{A}')
+A100 = A // 100; A = A % 100
+A50 = A // 50; A = A % 50
+A20 = A // 20; A = A % 20
+A10 = A // 10; A = A % 10
+A05 = A // 5; A = A % 5
+A02 = A // 2; A = A % 2
+A01 = A
+print(f'{A100} nota(s) de R$ 100,00')
+print(f'{A50} nota(s) de R$ 50,00')
+print(f'{A20} nota(s) de R$ 20,00')
+print(f'{A10} nota(s) de R$ 10,00')
+print(f'{A05} nota(s) de R$ 5,00')
+print(f'{A02} nota(s) de R$ 2,00')
+print(f'{A01} nota(s) de R$ 1,00')
+
