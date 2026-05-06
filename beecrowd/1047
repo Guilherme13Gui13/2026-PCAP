@@ -6,7 +6,7 @@ Estudante: Guilherme Antunes de Camargo
 # Objetivo: Calcular a duração de um jogo (em horas e minutos), sabendo a hor de início, e a hora de fim. O jogo dura no mínimo 1 minutos, e no máximo 24 horas.
 
 # --- ANÁLISE (LIAC) ---
-# Entrada: $ inteiros na mesma linha, hi mi hf mf.
+# Entrada: 4 inteiros na mesma linha, hi mi hf mf.
 # Processamento: Converter início e fim para o total em minutos. Se o fim for menor ou igual ao início, o jogo "virou a meia-noite", (somar 24 horas em minutos); converter a duração de volta para horas e minutos.
 # Saída: "O JOGO DUROU H HORA(S) E M MINUTO(S)".
 #map(int,...) aplica int() em cada pedaço de uma vez - vira [16, 0, 7, 0].

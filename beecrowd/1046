@@ -1,0 +1,23 @@
+'''
+Problema: beecrowd | 1046
+Data: 2026.05.06
+Estudante: Guilherme Antunes de Camargo
+'''
+# Objetivo: Calcular a duração de um jogo em horas. O jgog dura no mínimo 1 hora, e no máximo 24 horas, podendo virar a maia-noite.
+
+# --- ANÁLISE (LIAC) ---
+# Entrada: 2 inteiros na mesma linha, hi hf.
+# Processamento: Coverter para minutos e depois fazer a divisão inteira por 60.
+# Saída: " O JOGO DUROU H HORA(S)".
+
+hi, hf = map(int, input().split())
+ti = (hi * 60)
+tf = (hf * 60)
+if ti > tf:
+    tt = (tf - ti) + (24 * 60)
+else:
+    tt = tf - ti
+
+if tt == 0:
+    tt = 24 * 60
+print(f"O JOGO DUROU {tt // 60} HORA(S)")
