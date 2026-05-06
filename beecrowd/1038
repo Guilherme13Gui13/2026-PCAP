@@ -1,0 +1,27 @@
+'''
+Problema: beecrowd | 1038
+Data: 2026.05.06
+Estudante: Guilherme Antunes de Camargo
+'''
+# Objetivo: Ler um código e a quantidade do intem, em seguida mostrar o valor da conta a pagar.
+
+# --- ANÁLISE (LIAC) ---
+# Entrada: Dois valores inteiros, um relacionado ao código e outro relacionado a quantidade.
+# Processamento: Identificar pelo código que item se trata e multplicar o valor do produto pela quantidade.
+# Saída: Mostrar: "Total: R$ valor", com duas casa decimais.
+
+a, b = input().split()
+a = int(a)
+b = int(b)
+if a == 1:
+    c = 4.00
+elif a == 2:
+    c = 4.50
+elif a == 3:
+    c = 5.00
+elif a == 4:
+    c = 2.00
+else:
+    c = 1.50
+total = c * b
+print(f"Total R$ {total:.2f}")
