@@ -1,0 +1,28 @@
+'''
+Problema: beecrowd | 1051
+Data: 2026.05.13
+Estudante: Guilherme Antunes de Camargo
+'''
+# Objetivo: Ler uma sálario, utilizar ir, elif e else para ver quanto aquela pessoa irá pagar de impostos.
+
+# --- ANÁLISE (LIAC) ---
+# Entrada: Um valor decimal, com duas casas após a vígula.
+# Processamento: Se o salário for maior do que 4500,00, a pessoa pagará 28% em cima do que ultrapassar essa cota. Isso ocorre com todos os outros preços da tabela de impostos. Se o salário ultrapassar um valor x, somente o que ultrapassou a cota estará sujeito a impostos, se o valor que não ultrapassou esse imposto, ultrapassar o limite de outro, pagará a n% do que ultrapassar esse segundo tributo. Isso se repete té que o valor final esteja isento.
+# Saída: Exibir "R$ valor do imposto a ser pago" ou "Isento".
+
+salario = float(input()) #salario recebe o salário da pessoa
+impos = 0 #impos rece o imposto.
+a = salario
+if salario > 4500:
+    impos += ((salario -4500) * 0.28)
+    a = (a - (salario - 4500))
+if salario > 3000:
+    impos += ((a - 3000) * 0.18)
+    a = (a - (a - 3000))
+if salario > 2000:
+    impos += ((a - 2000) * 0.08)
+    a = (a - (a - 2000))
+if salario < 2000:
+    print(f"Isento")
+else:
+    print(f"R$ {impos:.2f}")

@@ -1,0 +1,16 @@
+'''
+Problema: beecrowd | 1015
+Data: 2026.05.14
+Estudante: Guilherme Antunes de Camargo
+'''
+# Objetivo: Ler quatro valores correspondentes aos eixos x e y de dois pontos distintos no plano e calcular a distância deles, com 4 casas decimais, usando uma fórmula pré definida.
+
+# --- ANÁLISE (LIAC) ---
+# Entrada: Quatro valores, dois em duas linhas. A primeira contém números com casa após a vírgula x1 e y1, a segunda, também com ponto flutuante, os números x2 e y2.
+# Processamento: Distância = raiz quadrada de ((x2-x1)^2 + (y2-y1)^2).
+# Saída: Exibir o resultado com quatro casas após a vírgula.
+
+x1, y1 = map(float, input().split())
+x2, y2 = map(float, input().split())
+distancia = (((x2 - x1) ** 2) + ((y2 - y1) ** 2)) ** 0.5
+print(f"{distancia:.4f}")

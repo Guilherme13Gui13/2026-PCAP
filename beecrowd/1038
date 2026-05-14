@@ -24,4 +24,4 @@ elif a == 4:
 else:
     c = 1.50
 total = c * b
-print(f"Total R$ {total:.2f}")
+print(f"Total: R$ {total:.2f}")

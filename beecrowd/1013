@@ -1,5 +1,5 @@
 '''
-Problema: beecrowd | 1012
+Problema: beecrowd | 1013
 Data: 2026.04.23
 Estudante: Guilherme Antunes de Camargo
 '''
@@ -10,10 +10,10 @@ Estudante: Guilherme Antunes de Camargo
 # Saída: Exibir "  valor eh o maior".
 
 A , B, C = input().split()
+A = int(A)
+B = int(B)
+C = int(C)
 
-if A > B and A > C:
-    print(f"{A} eh o maior")
-elif B > A and B > C:
-    print(f"{B} eh o maior")
-else:
-    print(f"{C} eh o maior")
+MAB = (A + B + abs(A - B)) / 2
+MABC = int(MAB + C + abs(MAB - C)) / 2
+print(f"{MABC:.0f} eh o maior")
