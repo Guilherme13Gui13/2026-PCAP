@@ -15,8 +15,8 @@ def jogar(maximo, chances):
         else:
             print("Muito Alto!")
 
-        chances = chances - 1
-        print("Chances restantes:", chances)
+            chances = chances - 1
+            print("Chances restantes:", chances)
 
         return acertou
     
@@ -38,8 +38,8 @@ def jogar_tutorial(chances):
         else:
             print("Errado! Essa não é a vogal secreta.")
 
-        chances = chances - 1
-        print("Chances restantes:", chances)
+            chances = chances - 1
+            print("Chances restantes:", chances)
 
     return acertou
 
