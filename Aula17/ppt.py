@@ -46,4 +46,4 @@ for rodada in range(1, 6):
             print("A máquina ganhou a rodada!")
             pontos_maquina += 1
 
-print("Placar final -> você:", pontos_jogador, "| Máquina:", pontos_maquina)
+print("Placar final -> Você:", pontos_jogador, "| Máquina:", pontos_maquina)
