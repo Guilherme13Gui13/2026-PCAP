@@ -7,7 +7,7 @@
 # ====================================================================== #
 
 jogar_de_novo = "sim"
-historico_partidas = []
+historico_partidas = [] #Lista que guarda o histórico das partidas.
 while jogar_de_novo == "sim":
     pj = 0
     pm = 0
@@ -59,7 +59,7 @@ while jogar_de_novo == "sim":
 
          resultado2 = ganhador(jogadornumero, jogadorpalavra) #Chama a função.
          dados_da_rodada = f"Rodada {rodada}: Jogador ({jogadornumero}) VS Máquina ({maquinanumero}) -> Ganhador: {resultado2}"
-         historico_partidas.append(dados_da_rodada)
+         historico_partidas.append(dados_da_rodada) #Preenche a lista com os dados.
 
          if resultado2 == "jogador": #Identifica o ganhador.
              print(f"Você ganhou a rodada {rodada}")
@@ -73,16 +73,16 @@ while jogar_de_novo == "sim":
 
     jogar_de_novo = input("Você quer jogar de novo? (sim/não): ") #Se for "sim", o while lá em cima repete tudo.
 print("Obrigado por jogar! ;)")
-print("\n" + "="*20 + " ESTATÍSTICA GERAL " + "="*20)
+print("\n" + "="*20 + " ESTATÍSTICA GERAL " + "="*20) #Começa a estatística e o histórico.
 print(f"Total de Vitórias do Jogador: {pj}")
 print(f"Total de Vitórias da Máquina: {pm}")
 
-total_rodadas = len(historico_partidas)
+total_rodadas = len(historico_partidas) #Lê a quantidade de caracteres.
 if total_rodadas > 0:
     porcentagem_jogador = (pj / total_rodadas) * 100
     print(f"Aproveitamento do Jogador: {porcentagem_jogador:.1f}%")
 
-print("\n" +"="*20 + " HISTÓRICO DE JOGADAS " + "="*20)
-for partida in historico_partidas:
-    print(partida)
-print("="*62)
+print("\n" +"="*20 + " HISTÓRICO DE JOGADAS " + "="*17)
+for partida in historico_partidas: #Laço de repetição que passa por cada jogo salvo na lista
+    print(partida) #Printa as informações da lista
+print("="*59)
