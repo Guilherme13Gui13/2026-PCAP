@@ -1,0 +1,34 @@
+'''
+Guilherme Antunes de Camargo
+02/07/2026
+README.md do jogo "Pedra Papel Tesoura Lagarto Spock"
+Arquivo: pptls.py
+
+# Variáveis:
+Linha 33, variável "opcoes": Guarda as opções para o jogador e para a máquina em uma lista.
+Linhas 37 e 38, variáveis "pontos_jogador" e "pontos_maquina": Guardam a quantidade de pontos que a máquina e o jogador acumular a medida do jogo.
+Linha 44, variável "jogada_maquina": Guarda a escolha da máquina.
+
+# Operadores:
+Linha 13, operador "==": Verifica se os dados guardados em duas variáveis são iguais.
+Linha 51, operador "+=": Adiciona 1 a variável, a += 1 é a mesma coisa de a = a + 1.
+Linha 68, operador ">": Verifica se o valor dentro de uma variável é maior que outro valor dentro de outra variável.
+
+# Estruturas de Repetição:
+Linha 36, estrutura de repetição "While True": Vai repetir tudo se o jogador quiser jogar novamente.
+Linha 42, estrutura de repetição "for ... in range(...)": Repete tudo 5 vezes, para que tenhamos uma melhor de 5.
+
+# Estruturas de Condição:
+Linha 13, condicional "if": Se a variável jogador for igual a variável maquina (escolhas de cada um), ele vai retornar empate.
+Linha 58, condicional "elif": Se a variável quem for igual a "jogador" pontos_jogador += 1.
+Linha 59, condicional "else": Se nenhum dos casos acima do else forem True, pontos_maquina += 1.
+
+# Sub-rotinas:
+Linha 12, sub-rotina "def resultado(jogador, maquina): Define se o jogo empatou, vitótia do jogador ou da máquina, possui o dicionário com as opções.
+
+# Entrada e Saída:
+Linha 40, saída "print(...)": Mostra o "jogo Iniciado".
+Linha 47, entrada "input(...)": O jogador insere a jogada dele.
+Linha 50, saída "print(...)": Mostra Inválido se o jogador escreveu algo que não está dentro das opções pedra, papel, spock, lagarto, tesoura.
+
+'''

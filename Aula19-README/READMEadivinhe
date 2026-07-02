@@ -1,0 +1,36 @@
+'''
+Guilherme Antunes de Camargo
+02/07/2026
+README.md do jogo "Adivinhe o número"
+Arquivo: adivinhe3.py
+
+# Variáveis:
+Linha 14, variável "numero_secreto": Guarda o número que se deve descobrir (ou vogal).
+Linha 35, variável "vogais": Guarda em uma lista as vogais que o jogador deve descobrir.
+Linha 66, variável "opcao": Guarda a opção do jogador.
+
+# Operadores:
+Linha 71, operador "==": Verifica se a variável opcao é igual a 1.
+Linha 23, operador "<": Verifica se o palpite é maior que o numero_secreto.
+Linha 28, possível operador "-=":
+
+# Estruturas de Repetição: 
+
+
+
+
+# Estrturas de Condição:
+
+
+
+
+# Sub-rotina:
+
+
+
+
+# Entrada e saída:
+
+
+
+'''

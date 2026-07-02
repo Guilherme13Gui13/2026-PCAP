@@ -1,3 +1,12 @@
+# ====================================================================== #
+# Disciplina: Pensamento Computacional, Algoritimos e programação (PCAP)
+# Projeto   : Jogo "Adivinhe o Número"
+# Arquivo   : adivinhe3.py
+# Autor     : Guilherme Antunes de Camargo
+# Data      : 28/05/2026
+# ====================================================================== #
+
+
 import random
 
 # === Função para os níveis numéricos (Fácil, Médio, Impossível) ===
