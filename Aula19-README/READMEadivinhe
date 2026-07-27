@@ -12,25 +12,22 @@ Linha 66, variável "opcao": Guarda a opção do jogador.
 # Operadores:
 Linha 71, operador "==": Verifica se a variável opcao é igual a 1.
 Linha 23, operador "<": Verifica se o palpite é maior que o numero_secreto.
-Linha 28, possível operador "-=":
+Linha 28, operador "-=": (Poderia ter colocado ele)  Simplifica a seguinte linha de chances = chances - 1 para chances -= 1, ambos fazem o mesmo.
 
 # Estruturas de Repetição: 
-
-
-
+Linha 41, estrutura de repetição "while": Serve como um "enquanto", enquanto a variável chances guardar um valor maior que 0 e a pessoa não acertou ele vai repetir tudo que estiver indentado.
 
 # Estrturas de Condição:
-
-
-
+Linha 80, condidional "if": Se a pessoa não venceu vai aparecer no terminal uma mensagem de que ela perdeu.
+Linha 23, condicional "elif": Se a variável palpite for menor que a numero_secreto aparecerá que o número escolhido é menor que o número secreto.
+Linha 25, condicional "else": Se nenhum dos casos acima for verdadeiro aparecerá no terminal "muito alto [...]".
 
 # Sub-rotina:
-
-
-
+Linha 13, sub-rotina "def jogar(maximo, chances)": Define uma subrotina que escolhe o valor da máquina, o valor do jogador é inserido, o valor do player é avaliado e as chances são contabilizadas.
+Linha 34, sub-rotina "def jogar_tutorial(chances)": Define a parte do jogo no nível tutorial, ou seja, basicamente tudo do outra sub-rotina só que adaptado para esse nível.
 
 # Entrada e saída:
-
-
+Linha 21, saída "print("Acertou!")": Mostra no terminal o que está dentro do parênteses.
+Linha 18, entrada "...int(...)" O jogador insere no terminal o palpite dele em relação ao número secreto.
 
 '''

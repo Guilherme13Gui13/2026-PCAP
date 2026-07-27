@@ -5,32 +5,30 @@ README.md do jogo "Par ou ímpar"
 Arquivo: par_impar4.py
 
 # Variáveis:
-
-
-
+Linha 9, variável "jogar_de_novo": Guarda se a pessoa quer jogar novamente (informação posteriormente usada para repetir o progama sem ter que apertar o botão novamente).
+Linha 12, variável "pj": Guarda os pontos do jogador.
+Linha 14, variável "rodada": Guarda a rodada em que o jogo se encontra.
 
 # Operadores:
-
-
-
+Linha 11, operador "==": Verifica se a variável jogar_de_novo é igual a "sim", emitindo um true ou false para o while.
+Linha 35, operador "%": Verifica o resto inteiro da divisão por 2.
+Linha 45, operador "=+": Poderia ter sido usado para simplificar o código.
 
 # Estruturas de Repetição: 
-
-
-
+Linha 11, estrutura de repetição "while": Se recebe true repete todo o código indentado, repetindo o jogo novamente.
+Linha 16, estrutura de repetição "range(...)': Faz com que o jogo funcione exatamente cinco partidas.
 
 # Estrturas de Condição:
-
-
-
+Linha 36, condicional "if": Identifica se a variável c é igual a 0, se sim return "par".
+Linha 38, condicional "else": Se o if acima for false vai ser return "ímpar".
+Linha 47, condicional "elif": Se a variável jogadornumero não está em opcoes2 a máquina ganhará mais um ponto.
 
 # Sub-rotina:
-
-
-
+Linha 34, sub-rotina "def soma (...)": vê se a soma é par ou ímpar.
+Linha 42, sub-rotina "def ganhador(...)": determina o ganhador.
 
 # Entrada e saída:
-
-
+Linha 20, entrada "...input(...)": O jogador escolhe se quer par ou ímpar.
+Linha 65, saída "print(...)": Vai aparecer no terminal o que estiver dentro do parênteses.
 
 '''
