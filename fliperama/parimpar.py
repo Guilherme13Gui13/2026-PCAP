@@ -76,6 +76,7 @@ def jogar_parimpar():
 
 
 '''
+Na dúvida se isso foi feito com IA sempre deixo algumas versões anteriores para provar que não usei IA
 def jogar_parimpar():
     titulo("Par ou Ímpar")
     pontos_jogador = 0

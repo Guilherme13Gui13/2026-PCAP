@@ -1,8 +1,8 @@
 from os.path import exists
 from telas import titulo, linha
-from modulos import ler_opcao
+from modulos import ler_opcao, ler_texto
 
-ARQUIVO = 'jogadores.csv'
+ARQUIVO = 'fliperama/jogadores.csv'
 
 
 # ================================================================
@@ -10,7 +10,8 @@ ARQUIVO = 'jogadores.csv'
 # DISCIPLINA : Pensamento Computacional, Algoritimos e Programação
 # (2026-PCAP)
 # AULA : 22 - MauApp v2.0: o cadastro de jogadores
-# AUTOR : Guilherme antunes de Camargo
+# AUTOR : Guilherme Antunes de Camargo
+# Revisado : Aula 23 - validação de campo vazio e documentação
 # CONCEITOS : Registro como lista de campos, cadastro como lista
 # de listas, cadastrar, listar, bucar, alterar, excluir, persistencia
 # em arquivo .csv
@@ -30,10 +31,14 @@ ARQUIVO = 'jogadores.csv'
 
 
 def cadastrar(jogadores):
+    ''' 
+Pergunta apelido e nome e acrescenta um jogador ao cadastro.
+Não devolve nada: o cadastro muda no lugar.
+'''
     titulo('NOVO JOGADOR')
 
-    apelido = input('Apelido (sem espaços): ').strip().lower()
-    nome = input('Nome completo: ').strip()
+    apelido = ler_texto('Apelido (sem espaços)').lower()
+    nome = ler_texto('Nome completo')
 
     novo = [apelido, nome, '0']
     jogadores.append(novo)
@@ -43,19 +48,30 @@ def cadastrar(jogadores):
 
 
 def listar(jogadores):
-    titulo('JOGADORES CADASTRADOS')
+    titulo('TOP 10 JOGADORES')
 
     if len(jogadores) == 0:
         print('Nenhum jogador cadastrado ainda.')
     else:
-        for jogador in jogadores:
-            print(jogador[0] + ' | ' + jogador[1] + ' | ' + jogador[2] + ' partidas')
+        ranking = sorted(jogadores, key=lambda j: int(j[2]), reverse=True)
+
+        for i in range(len(ranking[:10])):
+            print(str(i + 1).rjust(2) + '. ' + ranking[i][0].ljust(6) + ' | ' + ranking[i][1].ljust(18) + ' | ' + ranking[i][2].rjust(3) + ' partidas')
 
     linha()
 
 
 def buscar(jogadores, apelido):
-    # Devolve a POSIÇÃO do jogador na lista, ou -1 se não achar.
+    '''
+    Procura um apelido no cadastro e diz ONDE ele esta.
+
+    Parametros:
+        jogadores (list) - o cadastro inteiro.
+        apelido (str) - o apelido procurado, em minúsculas.
+
+    Retorno:
+        Int - a posição do jogador na lista, ou -1 se não achar.
+    '''
     for i in range(len(jogadores)):
         if jogadores[i][0] == apelido:
             return i
@@ -66,27 +82,30 @@ def buscar(jogadores, apelido):
 def alterar(jogadores):
     listar(jogadores)
 
-    apelido = input('Apelido de quem vai mudar de nome: ').strip().lower()
+    apelido = ler_texto('Apelido de quem vai mudar de nome: ').lower()
     i = buscar(jogadores, apelido)
 
     if i == -1:
         print('Não achei ninguém com esse apelido.')
     else:
         print('Nome atual: ' + jogadores[i][1])
-        jogadores[i][i] = input('Nome novo: ').strip()
+        jogadores[i][i] = ler_texto('Nome novo: ').strip()
         print('Pronto. Agora e ' + jogadores[i][i] + '.')
 
     linha()
 
 
 def excluir(jogadores):
+    '''
+    Recebe como parametro o jogadores e busca qual deles vai ser excluido e qual nome entra no lugar.
+    '''    
     listar(jogadores)
 
     apelido = input('Apelido de quem vai sair do cadastro: ').strip().lower()
     i = buscar(jogadores, apelido)
 
     if i == -1:
-        print('Não acei ninguém com esse apelido.')
+        print('Não achei ninguém com esse apelido.')
     else:
         print('Vou apagar o cadastro de ' + jogadores[i][1] + '.')
         print('[1] Confirmar')

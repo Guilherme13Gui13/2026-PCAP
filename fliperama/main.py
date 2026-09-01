@@ -7,7 +7,7 @@
 # Conceitos:  escrever depopois
 # ===========================================
 
-# Importar funções de arquivos
+# Importar funções de arquivos PAREI NAS ASPASASSSS
 from telas import titulo, linha
 from adivinhe import jogar_adivinhe
 from ppt import jogar_ppt
@@ -15,24 +15,26 @@ from modulos import ler_opcao
 from placar import salvar_placar, carregar_placar
 from jogadores import menu_jogadores, salvar_jogadores, carregar_jogadores
 from parimpar import jogar_parimpar
+from termo import jogar_termo
 
-NOMES_DOS_JOGOS = ['Adivinhe o Numero', 'Perda-Papel-Tesoura', 'Par ou Impar']
+NOMES_DOS_JOGOS = ['Adivinhe o Numero', 'Pedra-Papel-Tesoura', 'Par ou Impar', 'Termo']
 vezes_jogado = carregar_placar()
 jogadores = carregar_jogadores()
 def mostrar_placar():
     titulo('PLACAR')
-    for i in range(3):
+    for i in range(len(vezes_jogado)):
         print(NOMES_DOS_JOGOS[i] + ': ' + str(vezes_jogado[i]) + 'x')
               
 NOME_DO_DONO = "GUILHERME"
-OPCOES = ["0", "1", "2", "3", "4"]
+OPCOES = ["0", "1", "2", "3", "4", "5"]
 
 while True:
     titulo("FLIPERAMA DO " + NOME_DO_DONO)
     print("1 - Jogo Adivinhe o Número")
     print("2 - Jogo PEDRA-PAPEL-TESOURA")
     print("3 - Jogo Par ou Ímpar")
-    print("4 - Jogadores")
+    print("4 - Termo")
+    print("5 - Jogadores")
     print("0 - Sair do Fliperama")
     linha()
     opcao = ler_opcao("Escolha uma opção", OPCOES)
@@ -44,7 +46,7 @@ while True:
         titulo("Até a próxima!")
         break
 
-    if opcao == '4':
+    if opcao == '5':
         menu_jogadores(jogadores)
     else:
         indice = int(opcao) - 1
@@ -56,6 +58,8 @@ while True:
             jogar_ppt()
         elif opcao == "3":
             jogar_parimpar()
+        else:
+            jogar_termo()
 
     input('Pressione Enter para voltar ao menu...')
 
