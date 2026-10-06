@@ -1,5 +1,5 @@
 /*
-Problema 1000 Beecrowd
+Problema 1078 Beecrowd
 2026.09.29
 Guilherme Antunes de Camargo
 */
