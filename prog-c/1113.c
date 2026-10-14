@@ -19,7 +19,7 @@ int main() {
         }
 
         scanf("%d %d", &x, &y);
-
-        return 0;
     }
+        return 0;
+    
 }
