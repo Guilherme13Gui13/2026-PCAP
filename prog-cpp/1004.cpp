@@ -1,6 +1,6 @@
 /*
 * Disciplina : 2026-PCAP
-* Problema : beecrowd 1001 - Extremamente Basico
+* Problema : beecrowd 1004 - Produto Simples
 * Autor: Guiherme Antunes de Camargo
 */
 
