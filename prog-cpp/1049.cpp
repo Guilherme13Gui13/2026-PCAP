@@ -2,6 +2,7 @@
 * Disciplina : 2026-PCAP
 * Problema : beecrowd 1049 - animal
 * Autor: Guiherme Antunes de Camargo
+* LIAC: Utilizar estruturas condicionais encadeadas com if e else if para identificar o animal com base em três palavras lidas na entrada.
 */
 #include <iostream>
 #include <string>

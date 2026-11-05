@@ -2,6 +2,7 @@
 * Disciplina : 2026-PCAP
 * Problema : beecrowd 1011 - Esfera
 * Autor: Guiherme Antunes de Camargo
+* LIAC: Calcular o volume de uma esfera multiplicando (4.0 / 3.0) por pi e pelo raio ao cubo, forçando a divisão em ponto flutuante.
 */
 #include <iostream>
 #include <iomanip>

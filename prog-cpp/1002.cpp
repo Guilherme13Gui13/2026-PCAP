@@ -2,6 +2,7 @@
 * Disciplina : 2026-PCAP
 * Problema : beecrowd 1002 - Área do Círculo
 * Autor: Guiherme Antunes de Camargo
+* LIAC:  Calcular a área multiplicando pi pelo raio ao quadrado com variáveis double, definindo a precisão em 4 casas decimais com fixed e setprecision(4).
 */
 #include <iostream>
 #include <iomanip>
