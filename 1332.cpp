@@ -1,6 +1,6 @@
 /*
 * Disciplina : 2026-PCAP
-* Problema : beecrowd 1332 - Esfera
+* Problema : beecrowd 1332 - one two three
 * Autor: Guiherme Antunes de Camargo
 */
 #include <iostream>
