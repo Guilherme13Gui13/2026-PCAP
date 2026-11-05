@@ -1,6 +1,6 @@
 /*
 * Disciplina : 2026-PCAP
-* Problema : beecrowd 1011 - Esfera
+* Problema : beecrowd 1049 - Esfera
 * Autor: Guiherme Antunes de Camargo
 */
 #include <iostream>
