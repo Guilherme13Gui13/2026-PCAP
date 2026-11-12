@@ -1,7 +1,7 @@
 /*
 * Disciplina : 2026-PCAP - 1174 Seleção em Vetor I
 * Autor: Guiherme Antunes de Camargo
-* LIAC: Le N e depois N inteiros nm vector. Imprime o menor valor e a posição em que ele esta (a partir de zero).
+* LIAC: Le 100 numeros reais em um vector, depois mostra com posicao os que são menores ou iguais ao 10, com uma casa decimal.
 */
 
 #include <iostream>
