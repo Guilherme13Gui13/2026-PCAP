@@ -1,5 +1,5 @@
 /*
-* Disciplina : 2026-PCAP - Menor e Posicao
+* Disciplina : 2026-PCAP - 1180 Menor e Posicao
 * Autor: Guiherme Antunes de Camargo
 * LIAC: Le N e depois N inteiros nm vector. Imprime o menor valor e a posição em que ele esta (a partir de zero).
 */
