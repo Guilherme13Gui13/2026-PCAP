@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 #define DONO "GUILHERME"
@@ -37,18 +38,51 @@ int ler_numero(string mensagem, int minimo, int maximo) {
     return numero;
 }
 
+string ler_texto(string mensagem) {
+    string texto;
+
+    cout << mensagem << ": ";
+    cin >> texto; // uma palavra, sem espacos
+    return texto;
+}
+
+void cadastrar(vector<string> &apelidos, vector<int> &partidas) {
+    string novo;
+
+    titulo("NOVO JOGADOR");
+    novo = ler_texto("Apelido (sem espaços)");
+
+    apelidos.push_back(novo);
+    partidas.push_back(0);
+    cout << "Jogador " << novo << " cadastrado." << endl;
+}
+
+void listar(vector<string> &apelidos, vector<int> &partidas) {
+    int i, qtd = apelidos.size();
+
+    titulo("JOGADORES CADASTRADOS");
+    if (qtd == 0) {
+        cout << "Nenhum jogador cadastrado ainda." << endl;
+    }
+    for (i = 0; i < qtd; i++) {
+        cout << apelidos[i] << " | " << partidas[i] << " partidas" << endl;
+    }
+}
+
 void mostrar_menu() {
     linha();
     cout << "  FLIPERAMA DO " << DONO << endl;
     linha();
     cout << "[1] Adivinhe o Numero" << endl;
-    cout << "[2] Cadrastrar jogada" << endl;
+    cout << "[2] Cadastrar jogada" << endl;
     cout << "[3] Listar jogadores" << endl;
     cout << "[0] Sair" << endl;
     linha();
 }
 
 int main() {
+    vector<string> apelidos;
+    vector<int> partidas;
     int opcao;
 
     mostrar_menu();
@@ -57,9 +91,9 @@ int main() {
         if (opcao == 1) {
             cout << "O jogo entra na fase 3." << endl;
         } else if (opcao == 2) {
-            cout << "O cadastro entra na fase 2." << endl;
+            cadastrar(apelidos, partidas);
         } else {
-            cout << "A lista entra na fase 2." << endl;
+            listar(apelidos, partidas);
         }
         mostrar_menu();
         opcao = ler_numero("Sua escolha", 0, 3);
