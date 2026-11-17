@@ -77,7 +77,7 @@ void carregar(vector<string> &apelidos, vector<int> &partidas) {
 
     while (getline(arquivo, apelido, ',')) { // le ate a virgula
         arquivo >> n; // o numero de partidas
-        arquivo.ignore(); // o Enter que sobru
+        arquivo.ignore(); // o Enter que sobrou
         apelidos.push_back(apelido);
         partidas.push_back(n);
     }
@@ -89,6 +89,11 @@ void cadastrar(vector<string> &apelidos, vector<int> &partidas) {
 
     titulo("NOVO JOGADOR");
     novo = ler_texto("Apelido (sem espaços)");
+
+    if (buscar(apelidos, novo) != -1) {
+        cout << "O jogador " << novo << " ja esta cadastrado!" << endl;
+        return;
+    }
 
     apelidos.push_back(novo);
     partidas.push_back(0);
