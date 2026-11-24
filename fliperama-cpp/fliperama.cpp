@@ -148,7 +148,7 @@ void mostrar_menu() {
     cout << "  FLIPERAMA DO " << DONO << endl;
     linha();
     cout << "[1] Adivinhe o Numero" << endl;
-    cout << "[2] Cadastrar jogada" << endl;
+    cout << "[2] Cadastrar jogador" << endl;
     cout << "[3] Listar jogadores" << endl;
     cout << "[0] Sair" << endl;
     linha();
