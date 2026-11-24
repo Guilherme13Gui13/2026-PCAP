@@ -36,4 +36,6 @@ Em C, eu precisava definir um tamanho fixo de jogadores, ja em C++ o vector aume
 
 | 4. Persistencia |Persistencia|B|linhas 157 a 182, o jogo salva tudo antes de desligar fliperama.cpp|
 
-| 5. Documentacao e comparacao |Documentação|A|linhas 1 a 39 README.md|
+| 5. Documentacao e comparacao |Documentação|A|linhas 1 a 41 README.md|
+
+Usei IA para tentar entender uma principal diferença entre o C e o C++ no código.
